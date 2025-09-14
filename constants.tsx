@@ -136,7 +136,7 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'Coursera',
     date: 'Issued May 2024',
     imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/Efj0wUW_jDhFoF5SKtUiPCUBfUC-p68PMV3EI9Fgt8lEeA?e=EnzAYy',
-    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/Efj0wUW_jDhFoF5SKtUiPCUBfUC-p68PMV3EI9Fgt8lEeA?e=EnzAYy',
+    url: 'https://drive.google.com/file/d/1y2nwGmaVxI6drG0w11eTgiJDmz6xy20v/view?usp=drive_link',
   },
     {
     title: 'Professional Development',
