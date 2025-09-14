@@ -120,7 +120,7 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'Uvu Africa',
     date: 'Issued Jun 2024',
     imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=5TAa9N',
-    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=5TAa9N',
+    url: 'https://github.com/Sibonelo-duma/MyPortfolio-Project/blob/main/Certifications/Artificial%20Intelligence%20(AI)%20Bootcamp%20completion%20badge(Sibonelo).png',
   },
   {
     title: 'Artificial Intelligence Essentials v2',
