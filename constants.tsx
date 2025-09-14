@@ -120,7 +120,7 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'Uvu Africa',
     date: 'Issued Jun 2024',
     imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=5TAa9N',
-    url: 'https://drive.google.com/file/d/19hFikBM3VVESKXo1j8Y94hVbXQCMU48M/view',
+    url: 'https://drive.google.com/file/d/19hFikBM3VVESKXo1j8Y94hVbXQCMU48M/view?usp=drive_link',
   },
   {
     title: 'Artificial Intelligence Essentials v2',
