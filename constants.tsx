@@ -144,6 +144,6 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'Uvu Africa',
     date: 'Issued Jan 2024',
     imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUK4usH0u59FvtckPro8d14BLdX7cq166p-3aj5fpardUg?e=J8shKa',
-    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUK4usH0u59FvtckPro8d14BLdX7cq166p-3aj5fpardUg?e=J8shKa',
+    url: 'https://drive.google.com/file/d/1Yi4DQ3avfnsqTo7Z_Y7I3EwiyWTXnNPx/view?usp=drive_link',
   },
 ];
