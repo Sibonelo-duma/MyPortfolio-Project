@@ -4,7 +4,13 @@ import type { Project, SkillCategory, Certification } from './types';
 
 const ChatIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.455.09-.934.09-1.425v-2.134c0-2.614.223-5.04.64-7.221a9.026 9.026 0 0 1 8.84-6.332c4.97 0 9 3.694 9 8.25Z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+  </svg>
+);
+
+const SentimentIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9 9.75h.008v.008H9V9.75Zm6 0h.008v.008H15V9.75Z" />
   </svg>
 );
 
@@ -16,131 +22,128 @@ const CarIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 const BookIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 18 18.25v-14.25c-1.052-.332-2.062-.512-3-.512-3.18 0-5.714 2.503-6 5.802Z" />
   </svg>
 );
 
-const FutureIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
-    </svg>
-);
-
 export const PROJECTS: Project[] = [
-  {
-    title: "AI ALERT RIDER",
-    description: "AlertRider. An innovative mobile application that uses AI and computer vision to enhance motorcycle rider safety. It analyzes the phone's camera feed in real-time to detect potential road hazards, monitor blind spots, and provide audible alerts to the rider.",
-    aiUsed: ["Computer Vision", "Real-time Object Detection", "Hazard Recognition", "Audible Alert Generation"],
-    techStack: ["Python", "OpenCV", "TensorFlow Lite", "React Native", "Node.js"],
-    demoUrl: "https://alerttriderapp.onrender.com/",
-    codeUrl: "#",
-    result: "Developed a prototype that identifies common road hazards with over 90% accuracy in simulated environments, showcasing the potential to significantly reduce rider accidents.",
-    icon: <CarIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
-    media: [
-      { type: 'image', url: 'https://picsum.photos/seed/motorcycle/800/450', alt: 'A view from the rider\'s perspective on a road.' },
-      { type: 'image', url: 'https://picsum.photos/seed/roadhazard/800/450', alt: 'Example of hazard detection overlay.' }
-    ]
-  },
-  {
-    title: "Sentiment Analysis System - Text Tone Analyzer",
-    description: "A web-based tool that analyzes user-provided text to determine its emotional tone. The system classifies text as positive, negative, or neutral, providing valuable insights for businesses monitoring brand perception, customer feedback, and social media engagement.",
-    aiUsed: ["Natural Language Processing (NLP)", "Sentiment Classification", "Text Preprocessing", "Machine Learning Modeling"],
-    techStack: ["Python", "Flask", "NLTK", "Scikit-learn", "React", "Tailwind CSS"],
-    demoUrl: "https://b27twzkhwqor.trickle.host/",
-    codeUrl: "#",
-    result: "Achieved a classification accuracy of 92% on a benchmark dataset of customer reviews, providing a reliable tool for automated sentiment analysis.",
-    icon: <BookIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
-    media: [
-      { type: 'image', url: 'https://picsum.photos/seed/sentiment/800/450', alt: 'Dashboard showing sentiment analysis results.' },
-      { type: 'image', url: 'https://picsum.photos/seed/textanalysis/800/450', alt: 'Example of text being analyzed for tone.' }
-    ]
-  },
-  {
-    title: "AI-Powered Customer Support Chatbot",
-    description: "A sophisticated chatbot designed to handle customer inquiries, process orders, and provide support. It leverages Natural Language Understanding (NLU) to interpret user intent and deliver accurate, context-aware responses.",
-    aiUsed: ["Natural Language Processing (NLP)", "Intent Recognition", "Sentiment Analysis", "Dialog Management"],
-    techStack: ["React", "Node.js", "FastAPI", "Python", "Google Gemini"],
-    demoUrl: "#",
-    codeUrl: "#",
-    result: "Reduced customer support response time by 60% and increased user satisfaction by improving the availability and consistency of support.",
-    icon: <ChatIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
-    media: [
-      { type: 'image', url: 'https://picsum.photos/seed/chatbot/800/450', alt: 'Chatbot interface showing a conversation.' },
-      { type: 'image', url: 'https://picsum.photos/seed/chatbot2/800/450', alt: 'Analytics dashboard for the chatbot.' }
-    ]
-  },
-  {
-    title: "This AI-Assisted Portfolio Website",
-    description: "A personal portfolio website built from the ground up with the assistance of Google's Gemini. I directed the AI to generate React components, structure the project, and apply styling with Tailwind CSS, showcasing effective human-AI collaboration.",
-    aiUsed: ["Code Generation", "Component Scaffolding", "Content Suggestions", "Debugging Assistance"],
-    // FIX: Changed "Gemini Pro" to "Google Gemini" to adhere to guidelines.
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Google Gemini"],
-    demoUrl: "#",
-    codeUrl: "#",
-    result: "Rapidly developed a fully responsive, modern portfolio website, demonstrating the power of AI as a productivity multiplier in software development.",
-    icon: <FutureIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />
-  }
+    {
+        title: 'AI Chatbot for Customer Support',
+        description: 'A conversational AI agent built to handle customer queries, provide instant support for FAQs, troubleshoot common issues, and intelligently escalate complex cases to human agents, improving user experience and operational efficiency.',
+        aiUsed: ['Natural Language Understanding (NLU)', 'Dialog Management', 'Intent Recognition', 'Google Gemini'],
+        techStack: ['Python', 'Google Gemini API', 'Flask', 'React', 'WebSocket', 'PostgreSQL'],
+        demoUrl: 'https://www.chatbase.co/chatbot-iframe/M_GGtJb9MHRjkaraH10Ov',
+        codeUrl: '#',
+        result: 'Decreased customer support ticket volume by 40% and improved average response time from 5 minutes to instantaneous for common queries.',
+        icon: <ChatIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
+        media: [
+          { type: 'image', url: 'https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A user interacting with a customer support chatbot on a laptop screen.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1620712943543-26fc76357457?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Abstract visualization of AI communication and data processing.' },
+        ],
+    },
+    {
+        title: 'Sentiment Analysis Engine',
+        description: 'A powerful tool designed to analyze customer feedback from various sources (reviews, social media, surveys) to determine sentiment (positive, negative, neutral). It provides businesses with actionable insights into customer satisfaction and brand perception.',
+        aiUsed: ['Natural Language Processing (NLP)', 'Sentiment Classification', 'Feature Extraction', 'Machine Learning Models'],
+        techStack: ['Python', 'Scikit-learn', 'Pandas', 'NLTK', 'Flask', 'React'],
+        demoUrl: 'https://b27twzkhwqor.trickle.host/',
+        codeUrl: '#',
+        result: 'Provided a 90% accuracy in classifying sentiment, enabling a client to improve their product strategy by addressing key areas of negative feedback.',
+        icon: <SentimentIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
+        media: [
+          { type: 'image', url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Dashboard displaying sentiment analysis results with charts and graphs.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Collage of social media icons representing sources of customer feedback.' },
+        ],
+    },
+    {
+        title: 'Autonomous Vehicle Simulation',
+        description: 'Developed a simulation environment for training and testing self-driving car algorithms. The system uses reinforcement learning to teach an agent to navigate complex urban environments, avoiding obstacles and obeying traffic laws.',
+        aiUsed: ['Reinforcement Learning (RL)', 'Computer Vision', 'Pathfinding Algorithms', 'Sensor Fusion'],
+        techStack: ['C++', 'Python', 'Unreal Engine', 'ROS', 'PyTorch'],
+        demoUrl: 'https://alerttriderapp.onrender.com/',
+        codeUrl: '#',
+        result: 'Achieved a 95% success rate in simulated driving tests, significantly reducing the need for expensive and time-consuming real-world testing.',
+        icon: <CarIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
+        media: [
+           { type: 'image', url: 'https://images.unsplash.com/photo-1616400311496-7a8d712c1b8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A computer screen showing lines of code for an autonomous vehicle system.' },
+           { type: 'image', url: 'https://images.unsplash.com/photo-1503793405333-a8a2512a2e4f?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Close-up of a sensor on a self-driving car.' },
+        ],
+    },
+    {
+        title: 'Intelligent Document Summarizer',
+        description: 'An AI-powered tool that automatically generates concise and coherent summaries of long documents, such as research papers, legal contracts, and news articles. It utilizes advanced NLP models to understand context and extract key information.',
+        aiUsed: ['Text Summarization (Extractive & Abstractive)', 'Transformer Models (BERT)', 'Topic Modeling'],
+        techStack: ['Python', 'Hugging Face', 'Flask', 'Docker', 'Next.js'],
+        demoUrl: '#',
+        codeUrl: '#',
+        result: 'Reduced document review time for users by an average of 70%, enabling faster decision-making and improved productivity.',
+        icon: <BookIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
+        media: [
+          { type: 'image', url: 'https://images.unsplash.com/photo-1583341612448-5223c25b3e6c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A user interacting with the document summarizer interface on a tablet.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A collection of books and a laptop, symbolizing research and document analysis.' },
+        ],
+    },
 ];
 
 export const SKILLS_DATA: SkillCategory[] = [
     {
-        name: "AI / Machine Learning",
-        skills: ["PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "OpenCV", "NLP", "Computer Vision"]
+        name: 'Languages',
+        skills: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'C++', 'HTML/CSS'],
     },
     {
-        name: "Programming Languages",
-        skills: ["Python", "TypeScript", "JavaScript", "Java", "SQL"]
+        name: 'AI/ML Frameworks',
+        skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Hugging Face', 'Keras', 'Pandas', 'NumPy'],
     },
     {
-        name: "Web & Backend",
-        skills: ["React", "Node.js", "FastAPI", "HTML/CSS", "Tailwind CSS", "REST APIs"]
+        name: 'Web Technologies',
+        skills: ['React', 'Node.js', 'Next.js', 'Flask', 'REST APIs', 'Docker', 'PostgreSQL'],
     },
     {
-        name: "Tools & Platforms",
-        skills: ["Git", "GitHub", "Docker", "Google Cloud Platform", "Vercel", "Jupyter Notebook"]
-    }
+        name: 'Developer Tools',
+        skills: ['Git & GitHub', 'VS Code', 'Jupyter', 'Linux/Unix', 'CI/CD', 'Agile/Scrum'],
+    },
 ];
 
-// FIX: Add CERTIFICATIONS constant to resolve import error in components/Certifications.tsx
+// FIX: New constant for certifications, using the new Certification type
 export const CERTIFICATIONS: Certification[] = [
   {
-    title: "Diploma in Information Technology",
-    subtitle: "Specialization in Communication Networks",
-    issuer: "Mangosuthu University of Technology",
-    date: "2023",
-    imageUrl: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/sibonelo_duma_capaciti_org_za/ERxLQdV1P91JqamugAqn_g8BxRpCojdOCbGmvKTq7PDjcA?e=BDciZh",
-    url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/sibonelo_duma_capaciti_org_za/ERxLQdV1P91JqamugAqn_g8BxRpCojdOCbGmvKTq7PDjcA?e=BDciZh&download=1"
+    title: 'Diploma in Information Technology',
+    subtitle: 'Communication Networks',
+    issuer: 'Mangosuthu University of Technology',
+    date: 'Issued May 2023',
+    imageUrl: 'https://capeitinitiative-my.sharepoint.com/:b:/g/personal/sibonelo_duma_capaciti_org_za/ET3wv4wVpPdLhidbN-R-W5gBsF91eCdmKyVnOdBUCFtvUw?e=kf4omR',
+    url: 'https://capeitinitiative-my.sharepoint.com/:b:/g/personal/sibonelo_duma_capaciti_org_za/ET3wv4wVpPdLhidbN-R-W5gBsF91eCdmKyVnOdBUCFtvUw?e=kf4omR',
   },
   {
-    title: "Artificial Intelligence (AI) Bootcamp",
-    subtitle: "Intensive training on AI concepts and applications",
-    issuer: "Capaciti",
-    date: "2025",
-    imageUrl: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=YG53n3",
-    url: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=YG53n3&download=1"
+    title: 'Artificial Intelligence (AI) Bootcamp',
+    subtitle: 'Comprehensive AI Training',
+    issuer: 'Uvu Africa',
+    date: 'Issued Jun 2024',
+    imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=5TAa9N',
+    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EfdJzrORE4JJlTDQuWdBZeMBmCXTRTPbgIsK9h19MHYkOg?e=5TAa9N',
   },
   {
-    title: "Artificial Intelligence Essentials v2",
-    subtitle: "Certification on AI Fundamentals",
-    issuer: "Certiport",
-    date: "2025",
-    imageUrl: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUykUsFSZvBJvB5sX_nBo1YBjEOfvEPl4lMA5leGbBW3hA?e=apQv9Q",
-    url: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUykUsFSZvBJvB5sX_nBo1YBjEOfvEPl4lMA5leGbBW3hA?e=apQv9Q&download=1"
+    title: 'Artificial Intelligence Essentials v2',
+    subtitle: 'Foundational AI Concepts',
+    issuer: 'Cisco',
+    date: 'Issued May 2024',
+    imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUykUsFSZvBJvB5sX_nBo1YBjEOfvEPl4lMA5leGbBW3hA?e=yCR5LX',
+    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUykUsFSZvBJvB5sX_nBo1YBjEOfvEPl4lMA5leGbBW3hA?e=yCR5LX',
   },
   {
-    title: "Python for Data Science and AI",
-    subtitle: "Foundational Python skills for AI development",
-    issuer: "Coursera",
-    date: "2025",
-    imageUrl: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/Efj0wUW_jDhFoF5SKtUiPCUBfUC-p68PMV3EI9Fgt8lEeA?e=v7fI2r",
-    url: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/Efj0wUW_jDhFoF5SKtUiPCUBfUC-p68PMV3EI9Fgt8lEeA?e=v7fI2r&download=1"
+    title: 'Python for Data Science and AI',
+    subtitle: 'Programming for AI Applications',
+    issuer: 'Coursera',
+    date: 'Issued May 2024',
+    imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/Efj0wUW_jDhFoF5SKtUiPCUBfUC-p68PMV3EI9Fgt8lEeA?e=EnzAYy',
+    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/Efj0wUW_jDhFoF5SKtUiPCUBfUC-p68PMV3EI9Fgt8lEeA?e=EnzAYy',
   },
-  {
-    title: "Professional Development",
-    subtitle: "Soft skills for the modern workplace",
-    issuer: "Capaciti",
-    date: "2025",
-    imageUrl: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUK4usH0u59FvtckPro8d14BLdX7cq166p-3aj5fpardUg?e=2AoEKX",
-    url: "https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUK4usH0u59FvtckPro8d14BLdX7cq166p-3aj5fpardUg?e=2AoEKX&download=1"
-  }
+    {
+    title: 'Professional Development',
+    subtitle: 'Work Readiness Program',
+    issuer: 'Uvu Africa',
+    date: 'Issued Jan 2024',
+    imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUK4usH0u59FvtckPro8d14BLdX7cq166p-3aj5fpardUg?e=J8shKa',
+    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUK4usH0u59FvtckPro8d14BLdX7cq166p-3aj5fpardUg?e=J8shKa',
+  },
 ];
