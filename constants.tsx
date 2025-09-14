@@ -128,7 +128,7 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'Cisco',
     date: 'Issued May 2024',
     imageUrl: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUykUsFSZvBJvB5sX_nBo1YBjEOfvEPl4lMA5leGbBW3hA?e=yCR5LX',
-    url: 'https://capeitinitiative.sharepoint.com/:i:/s/AdvancedDigitalSkills4/EUykUsFSZvBJvB5sX_nBo1YBjEOfvEPl4lMA5leGbBW3hA?e=yCR5LX',
+    url: 'https://drive.google.com/file/d/1P1OI5xcZy70TzrjFE1b1Izv_UZ-whCYA/view?usp=drive_link',
   },
   {
     title: 'Python for Data Science and AI',
