@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
         aiUsed: ['Natural Language Processing (NLP)', 'Sentiment Classification', 'Feature Extraction', 'Machine Learning Models'],
         techStack: ['Python', 'Scikit-learn', 'Pandas', 'NLTK', 'Flask', 'React'],
         demoUrl: 'https://b27twzkhwqor.trickle.host/',
-        codeUrl: '#',
+        codeUrl: 'https://github.com/Capaciti-Tech-Team/Sentimate-Analysis-System.git',
         result: 'Provided a 90% accuracy in classifying sentiment, enabling a client to improve their product strategy by addressing key areas of negative feedback.',
         icon: <SentimentIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
         media: [
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
         aiUsed: ['Reinforcement Learning (RL)', 'Computer Vision', 'Pathfinding Algorithms', 'Sensor Fusion'],
         techStack: ['C++', 'Python', 'Unreal Engine', 'ROS', 'PyTorch'],
         demoUrl: 'https://alerttriderapp.onrender.com/',
-        codeUrl: '#',
+        codeUrl: 'https://github.com/Capaciti-Tech-Team/Sentimate-Analysis-System.git',
         result: 'Achieved a 95% success rate in simulated driving tests, significantly reducing the need for expensive and time-consuming real-world testing.',
         icon: <CarIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
         media: [

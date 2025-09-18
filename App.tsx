@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import About from './components/About';
-import Meta from './components/Meta';
 import Contact from './components/Contact';
 import Certifications from './components/Certifications';
 import Footer from './components/Footer';
@@ -24,7 +23,6 @@ const App: React.FC = () => {
         {currentPage === 'home' && (
           <>
             <Hero onNavigate={handleNavigate} />
-            <Meta />
           </>
         )}
         {currentPage === 'projects' && <Projects />}
