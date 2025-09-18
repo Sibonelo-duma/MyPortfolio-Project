@@ -79,7 +79,7 @@ const MediaModal: React.FC<MediaModalProps> = ({ media, onClose }) => {
       {media.length > 1 && (
         <>
           <button onClick={goToPrevious} className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white bg-black/40 p-2 rounded-full hover:bg-indigo-500/50 transition-all" aria-label="Previous media">
-            <svg xmlns="https://github.com/Capaciti-Tech-Team/Sentimate-Analysis-System.git" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
