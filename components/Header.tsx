@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-interface HeaderProps {
-  currentPage: string;
-  onNavigate: (page: string) => void;
-}
+const navLinks = [
+  { page: 'home', label: 'Home', href: '#home' },
+  { page: 'projects', label: 'Projects', href: '#projects' },
+  { page: 'skills', label: 'Skills', href: '#skills' },
+  { page: 'about', label: 'About', href: '#about' },
+  { page: 'certifications', label: 'Certifications', href: '#certifications' },
+  { page: 'contact', label: 'Contact', href: '#contact' },
+];
 
-const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
+const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const observer = useRef<IntersectionObserver | null>(null);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,79 +24,59 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isMenuOpen]);
   
-  const handleNavClick = (page: string) => {
-      onNavigate(page);
-      setIsMenuOpen(false);
-  };
+  useEffect(() => {
+    if (observer.current) {
+        observer.current.disconnect();
+    }
 
-  const navLinks = [
-    { page: 'home', label: 'Home' },
-    { page: 'projects', label: 'Projects' },
-    { page: 'skills', label: 'Skills' },
-    { page: 'about', label: 'About' },
-    { page: 'certifications', label: 'Certifications' },
-    { page: 'contact', label: 'Contact' },
-  ];
+    observer.current = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+            }
+        });
+    }, { 
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0
+    });
+
+    const sections = navLinks.map(link => document.querySelector(link.href));
+    sections.forEach(section => {
+        if (section) {
+            observer.current?.observe(section);
+        }
+    });
+    
+    return () => {
+        observer.current?.disconnect();
+    };
+  }, []);
 
   return (
-    <>
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
-        <div className="container mx-auto px-6 md:px-12 py-4">
-          <div className="flex justify-between items-center">
-            <a href="#" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }} className="text-2xl font-bold text-white hover:text-indigo-400 transition-colors">
-              Sibonelo
-            </a>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none z-50 relative" aria-label="Toggle menu" aria-expanded={isMenuOpen}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
-              </svg>
-            </button>
-          </div>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
+      <div className="container mx-auto px-6 md:px-12 py-4">
+        <div className="flex justify-between items-center">
+          <a href="#home" className="text-2xl font-bold text-white hover:text-indigo-400 transition-colors">
+            Sibonelo
+          </a>
+          <nav>
+            <ul className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
+              {navLinks.map((link) => (
+                <li key={link.page}>
+                  <a 
+                    href={link.href}
+                    className={`text-xs sm:text-sm md:text-base font-medium transition-colors ${activeSection === link.page ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'}`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-      </header>
-      
-      {isMenuOpen && (
-          <div className="fixed inset-0 bg-slate-900 z-40 flex flex-col items-center justify-center">
-              <style>{`
-                  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-                  .animate-fade-in { animation: fade-in 0.3s ease-out; }
-                  @keyframes slide-in-up { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-                  .animate-slide-in-up { animation: slide-in-up 0.5s ease-out forwards; }
-              `}</style>
-              <nav className="animate-fade-in">
-                  <ul className="flex flex-col items-center space-y-8">
-                  {navLinks.map((link, index) => (
-                      <li 
-                        key={link.page} 
-                        className="opacity-0 animate-slide-in-up" 
-                        style={{ animationDelay: `${100 + index * 100}ms`}}
-                      >
-                      <a 
-                          href="#"
-                          onClick={(e) => { e.preventDefault(); handleNavClick(link.page); }}
-                          className={`text-3xl font-bold transition-colors ${currentPage === link.page ? 'text-indigo-400' : 'text-slate-300 hover:text-indigo-400'}`}
-                      >
-                          {link.label}
-                      </a>
-                      </li>
-                  ))}
-                  </ul>
-              </nav>
-          </div>
-      )}
-    </>
+      </div>
+    </header>
   );
 };
 

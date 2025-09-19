@@ -4,7 +4,7 @@ import { EmailIcon, PhoneIcon } from './Icons';
 
 const Contact: React.FC = () => {
   return (
-    <SectionWrapper title="Get In Touch">
+    <SectionWrapper title="Get In Touch" id="contact">
       <div className="max-w-2xl mx-auto text-center">
         <p className="text-slate-400 mb-12">
           I'm currently looking for new opportunities. If you have a project in mind or just want to connect, feel free to reach out through any of the channels below. I'm excited to hear from you!

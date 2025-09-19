@@ -5,11 +5,11 @@ import { AcademicCapIcon, BriefcaseIcon, AchievementIcon } from './Icons';
 
 const About: React.FC = () => {
   return (
-    <SectionWrapper title="About Me">
+    <SectionWrapper title="About Me" id="about">
       <div className="flex flex-col md:flex-row items-start gap-12 bg-slate-800/50 p-8 rounded-lg border border-slate-700">
         <div className="md:w-1/3 flex-shrink-0 mx-auto md:mx-0">
           <img
-            src="https://picsum.photos/seed/sibonelo/400/400"
+            src="https://i.postimg.cc/hP0Kmzx0/db0ebb6a-3fce-4c9f-b6d3-70d6943d491e.jpg"
             alt="Sibonelo"
             className="rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto object-cover border-4 border-slate-700 shadow-lg"
           />

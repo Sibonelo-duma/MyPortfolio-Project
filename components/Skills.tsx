@@ -4,7 +4,7 @@ import SectionWrapper from './SectionWrapper';
 
 const Skills: React.FC = () => {
   return (
-    <SectionWrapper title="Skills">
+    <SectionWrapper title="Skills" id="skills">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {SKILLS_DATA.map((category) => (
           <div key={category.name} className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
