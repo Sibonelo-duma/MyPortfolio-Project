@@ -6,7 +6,6 @@ import Skills from './components/Skills';
 import About from './components/About';
 import Contact from './components/Contact';
 import Certifications from './components/Certifications';
-import Meta from './components/Meta';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -20,7 +19,6 @@ const App: React.FC = () => {
         <About />
         <Certifications />
         <Contact />
-        <Meta />
       </main>
       <Footer />
     </div>
