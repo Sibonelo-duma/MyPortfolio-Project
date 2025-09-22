@@ -1,3 +1,4 @@
+
 import React from 'react';
 // FIX: Import Certification type to be used in the new CERTIFICATIONS constant.
 import type { Project, SkillCategory, Certification } from './types';
@@ -14,8 +15,8 @@ export const PROJECTS: Project[] = [
         result: 'Decreased customer support ticket volume by 40% and improved average response time from 5 minutes to instantaneous for common queries.',
         icon: <ChatIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
         media: [
-          { type: 'image', url: 'https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A user interacting with a customer support chatbot on a laptop screen.' },
-          { type: 'image', url: 'https://images.unsplash.com/photo-1620712943543-26fc76357457?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Abstract visualization of AI communication and data processing.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'A user interacting with a customer support chatbot on a laptop screen.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1620712943543-26fc76357457?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'Abstract visualization of AI communication and data processing.' },
         ],
     },
     {
@@ -28,8 +29,8 @@ export const PROJECTS: Project[] = [
         result: 'Provided a 90% accuracy in classifying sentiment, enabling a client to improve their product strategy by addressing key areas of negative feedback.',
         icon: <SentimentIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
         media: [
-          { type: 'image', url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Dashboard displaying sentiment analysis results with charts and graphs.' },
-          { type: 'image', url: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Collage of social media icons representing sources of customer feedback.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'Dashboard displaying sentiment analysis results with charts and graphs.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'Collage of social media icons representing sources of customer feedback.' },
         ],
     },
     {
@@ -42,8 +43,8 @@ export const PROJECTS: Project[] = [
         result: 'Achieved a 95% success rate in simulated driving tests, significantly reducing the need for expensive and time-consuming real-world testing.',
         icon: <CarIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
         media: [
-           { type: 'image', url: 'https://images.unsplash.com/photo-1616400311496-7a8d712c1b8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A computer screen showing lines of code for an autonomous vehicle system.' },
-           { type: 'image', url: 'https://images.unsplash.com/photo-1503793405333-a8a2512a2e4f?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'Close-up of a sensor on a self-driving car.' },
+           { type: 'image', url: 'https://thumbs.dreamstime.com/b/cars-waiting-traffic-light-pedestrians-to-cross-street-valencia-spain-august-91099412.jpg', alt: 'Cars waiting at a traffic light in a city.' },
+           { type: 'image', url: 'https://images.unsplash.com/photo-1503793405333-a8a2512a2e4f?q=80&w=1964&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'Close-up of a sensor on a self-driving car.' },
         ],
     },
     {
@@ -56,8 +57,8 @@ export const PROJECTS: Project[] = [
         result: 'Reduced document review time for users by an average of 70%, enabling faster decision-making and improved productivity.',
         icon: <BookIcon className="w-8 h-8 text-indigo-400 flex-shrink-0" />,
         media: [
-          { type: 'image', url: 'https://images.unsplash.com/photo-1583341612448-5223c25b3e6c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A user interacting with the document summarizer interface on a tablet.' },
-          { type: 'image', url: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3', alt: 'A collection of books and a laptop, symbolizing research and document analysis.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1583341612448-5223c25b3e6c?q=80&w=1932&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'A user interacting with the document summarizer interface on a tablet.' },
+          { type: 'image', url: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib-rb-4.0.3', alt: 'A collection of books and a laptop, symbolizing research and document analysis.' },
         ],
     },
 ];
